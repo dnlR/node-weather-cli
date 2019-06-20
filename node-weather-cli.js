@@ -33,8 +33,7 @@ axios.get(url)
       throw new Error('Address not found, please try again.');
     }
 
-    let api_key = process.env.DARK_SKY_API_KEY;
-    api_key = "5a0b7fe22a2acade1e10b6b62b188762";
+    const api_key = process.env.DARK_SKY_API_KEY;
     const weatherUrl = `https://api.darksky.net/forecast/${api_key}/` +
       `${lat},${lng}?lang=en&units=si&exclude=hourly,flags`;
 
