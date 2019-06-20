@@ -81,24 +81,22 @@ const calculateUvDamageRisk = (uvIndex) => {
 };
 
 const printWeatherForecast = (weather) => {
-  console.log();
-  console.log(`Forecast for today ${moment().format('DD/MM/YYYY')}\n`);
-  console.log(`${weather.summary}`);
-  console.log(`Max temperature: ${weather.maxTemp}`);
-  console.log(`Min temperature: ${weather.minTemp}`);
-  console.log(`Min apparent temperature: ${weather.apparentMinTemp}`);
-  console.log(`Max apparent temperature: ${weather.apparentMaxTemp}`);
-  console.log(`Humidity: ${weather.humidity}`);
-  console.log(`Cloud cover percentage: `,
-    `${Math.trunc(weather.cloudCover * 100)}%`);
-  console.log(`Precipitation probability: ${weather.precipitationProbability}`,
-    `with an intensity of ${weather.precipitationIntensity}mm/h`);
-  console.log(`UV index: ${weather.uvIndex}`);
-  console.log(`Max UV index at: ${weather.uvIndexTime}`);
-  console.log(`Damage risk due to unprotected sun exposure: `,
-    `${weather.uvDamageRisk}`);
-  console.log(`Wind speed: ${weather.windSpeed}m/s`);
-  console.log(`Today the sun rises at: ${weather.sunriseTime}`);
-  console.log(`Today the sun sets at: ${weather.sunsetTime}`);
-  console.log();
+  console.log(`
+Forecast for today ${moment().format('DD/MM/YYYY')}
+
+${weather.summary}
+    
+Max temperature: ${weather.maxTemp}°C
+Min temperature: ${weather.minTemp}°C
+Min apparent temperature: ${weather.apparentMinTemp}°C
+Max apparent temperature: ${weather.apparentMaxTemp}°C
+Humidity: ${weather.humidity}
+Cloud cover percentage: ${Math.trunc(weather.cloudCover * 100)}%
+Precipitation probability: ${weather.precipitationProbability} with intensity of ${weather.precipitationIntensity}mm/h
+UV index: ${weather.uvIndex}
+Max UV index at: ${weather.uvIndexTime}
+Damage risk due to unprotected sun exposure: ${weather.uvDamageRisk}
+Wind speed: ${weather.windSpeed}m/s
+Today the sun rises at: ${weather.sunriseTime}
+Today the sun sets at: ${weather.sunsetTime}`);
 };
